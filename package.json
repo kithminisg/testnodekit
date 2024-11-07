@@ -1,0 +1,21 @@
+{
+  "name": "testnodekit",
+  "version": "0.1.9",
+  "dependencies": {
+    "evernode-js-client": "0.6.60",
+    "hotpocket-js-client": "0.5.6"
+  },
+  "configDependencies": {
+    "evdevkit": "0.7.20", 
+    "hpdevkit": "0.6.8"
+  },
+  "bin": {
+    "evdevkit": "./node_modules/evdevkit/bin/evdevkit",
+    "hpdevkit": "./node_modules/hpdevkit/bin/hpdevkit"
+  },
+  "scripts": {
+    "postinstall": "node ./scripts/conditional-install.js",
+    "preuninstall": "node ./scripts/pre-uninstall.js"
+
+  }
+}
