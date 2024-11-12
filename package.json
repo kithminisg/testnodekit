@@ -1,21 +1,23 @@
 {
   "name": "testnodekit",
-  "version": "0.1.9",
-  "dependencies": {
-    "evernode-js-client": "0.6.60",
-    "hotpocket-js-client": "0.5.6"
-  },
+  "version": "0.1.18",
   "configDependencies": {
-    "evdevkit": "0.7.20", 
-    "hpdevkit": "0.6.8"
+    "global": {
+      "evdevkit": "0.7.20",
+      "hpdevkit": "0.6.8"
+    },
+    "local": {
+      "evernode-js-client": "0.6.60",
+      "hotpocket-js-client": "0.5.6",
+      "hotpocket-nodejs-contract": "0.7.4",
+      "everpocket-nodejs-contract": "0.1.5"
+    }
   },
   "bin": {
-    "evdevkit": "./node_modules/evdevkit/bin/evdevkit",
-    "hpdevkit": "./node_modules/hpdevkit/bin/hpdevkit"
+    "evernodecli": "./cli.js"
   },
   "scripts": {
     "postinstall": "node ./scripts/conditional-install.js",
     "preuninstall": "node ./scripts/pre-uninstall.js"
-
   }
 }

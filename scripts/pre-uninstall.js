@@ -1,15 +1,16 @@
 const { execSync } = require('child_process');
+const isGlobal = process.env.npm_config_global === 'true';
 
 function uninstallGlobalPackage(packageName) {
   try {
-    console.log(`Uninstalling ${packageName} globally...`);
     execSync(`npm uninstall -g ${packageName}`, { stdio: 'inherit' });
-    console.log(`${packageName} uninstalled globally.`);
   } catch (error) {
     console.error(`Failed to uninstall ${packageName} globally:`, error.message);
   }
 }
 
 // Uninstall globally
-uninstallGlobalPackage('evdevkit');
-uninstallGlobalPackage('hpdevkit');
+if (isGlobal) {
+  uninstallGlobalPackage('evdevkit');
+  uninstallGlobalPackage('hpdevkit');
+}
