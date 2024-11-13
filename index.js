@@ -4,6 +4,6 @@
 module.exports = {
     'Evernode': require('evernode-js-client'),
     'HotPocketClient': require('hotpocket-js-client'),
-    'HotPocketClient': require('hotpocket-nodejs-contract'),
+    'HotPocketContract': require('hotpocket-nodejs-contract'),
     'EverPocket': require('everpocket-nodejs-contract')
 };
